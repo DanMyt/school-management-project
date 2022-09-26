@@ -1,6 +1,7 @@
 package com.example.schoolmanagementproject;
 
 import com.example.schoolmanagementproject.student.ServiceStudent;
+import com.example.schoolmanagementproject.view.View;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,7 +20,7 @@ public class SchoolManagementProjectApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		final ServiceStudent s = this.context.getBean(ServiceStudent.class);
-		System.out.println(s);
+		final View view = this.context.getBean(View.class);
+		view.run();
 	}
 }
